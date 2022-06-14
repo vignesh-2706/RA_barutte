@@ -3,6 +3,7 @@ from flask import Flask, request, render_template
 from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
+import pickle
 
 model = pickle.load(open('RA.pickle','rb'))  #loading the model
 class_names = ['Negative', 'Positive']  #assigning the class_names
