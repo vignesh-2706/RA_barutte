@@ -81,9 +81,9 @@ Jinja2==2.11.2
 joblib==0.16.0
 pandas
 pytz==2020.1
-scikit-learn==0.23.2
+scikit-learn
 scipy
-sklearn==0.0
-threadpoolctl==2.1.0
-Werkzeug==1.0.1
-xgboost==0.90
+sklearn
+threadpoolctl
+Werkzeug
+xgboost
