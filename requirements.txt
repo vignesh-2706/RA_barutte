@@ -57,6 +57,7 @@ Pygments
 pyparsing
 python-dateutil
 pypiwin32==223
+pywin32==223
 pyzmq
 requests
 requests-oauthlib
