@@ -24,9 +24,7 @@ idna==3.3
 importlib-metadata==4.11.3
 ipykernel==6.13.0
 ipython==8.3.0
-itsdangerous==2.1.2
 jedi==0.18.1
-Jinja2==3.1.2
 jupyter-client==7.3.1
 jupyter-core==4.10.0
 keras==2.9.0
@@ -73,7 +71,6 @@ typing_extensions==4.2.0
 tzdata==2022.1
 urllib3==1.26.9
 wcwidth==0.2.5
-Werkzeug==2.1.2
 wrapt==1.14.1
 zipp==3.8.0
 click==7.1.2
