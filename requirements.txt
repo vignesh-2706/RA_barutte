@@ -56,7 +56,7 @@ pyasn1-modules
 Pygments
 pyparsing
 python-dateutil
-pywin32==304
+pywin32==301
 pyzmq
 requests
 requests-oauthlib
