@@ -3,6 +3,6 @@ gunicorn==20.1.0
 keras==2.8.0
 Keras-Preprocessing==1.1.2
 scikit-learn
-scipy==1.8.0
+scipy
 tensorflow==2.8.0
 tensorflow-io-gcs-filesystem==0.25.0
