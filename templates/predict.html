@@ -91,7 +91,7 @@
                     </div>
                 </form> -->
                 <div class="card shadow-lg  mx-auto" style=' width: 500px; height: auto;'>
-                  <img class="card-img-top mx-auto d-block mt-2 thumbnail" src={{url_for('static', filename='img.jpg')}} alt="Prediction" style="width:50%" height="auto">
+                  <img class="card-img-top mx-auto d-block mt-2 thumbnail" src="{{data[2]}}" alt="Prediction" style="width:50%" height="auto">
                   <div class="card-body center">
                     {% if data[0] =='Negative' %}
                     <h3 class="card-title text-center">Prediction is : <span class="text-success">{{ data[0] }} </span> </h3>
