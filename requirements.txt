@@ -1,5 +1,5 @@
 werkzeug==1.0.0
-numpy==1.19.1
+numpy>=1.19.1
 gunicorn==19.9.0
 Flask==1.1.1
 h5py==2.9.0
