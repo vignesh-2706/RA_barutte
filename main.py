@@ -2,6 +2,8 @@ from flask import Flask, request, render_template
 from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
+import io
+import base64
 
 model = load_model('SavedModel_V2.h5')  #loading the model
 class_names = ['Negative', 'Positive']  #assigning the class_names
@@ -38,10 +40,15 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predictt():
     img = request.files['img']    #getting the image from the user
-    img.save('static\img.jpg')     #saving the image
-    prediction, confidence = predict("static\img.jpg")     #predicting the image from previously defined predict function and sending the image as an argument
-    return render_template('predict.html', data=[prediction, confidence],usr_img = img)   #returning the prediction and confidence to the user
-
+    #img.save('static\img.jpg')     #saving the image
+    prediction, confidence = predict(img)     #predicting the image from previously defined predict function and sending the image as an argument
+    img = Image.open(img) 
+    data = io.BytesIO()
+    img.save(data, "JPEG")
+    encoded_img = base64.b64encode(data.getvalue())
+    decoded_img = encoded_img.decode('utf-8')
+    img_data = f"data:image/jpeg;base64,{decoded_img}"
+    return render_template('predict.html', data=[prediction, confidence,img_data])
 
 
 # # predict route
